@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>home</title>
+<link href="home.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="viewAll()">
+	
+	<div class="homeDetails" id="homeDetails">
+	  <div class="homeDetailsLeft">
+	   	<div>
+	 		<div class="homeLogo">
+	 			<div></div>
+	 			<h1>Projects</h1>
+	 		</div>
+	 		<div class="manuHeads">
+	 		    <div class="home"><a href="home.html" onclick="home()">Home</a></div>
+	 			<div class="companyMembers"><a href="members.html"  onclick="Members()">Members</a></div>
+	 			<div class="Team" ><a href="Team.html" onclick="team()">Teams</a></div>
+	 	
+	 			<div class="Project"><a href="project.html" onclick="projects()">Projects</a></div>
+	 			<div class="issues"><a href="issue.html" onclick="issue()">Issues</a></div>
+	 		
+	 			<div class="manuHeadTasks"><a href="taskSummary.html" onclick="tasks()">Tasks</a></div>
+	 		</div>
+ 	    </div>
+	  </div>
+	  <div class="homehead">
+ 			<h6>Home</h6>
+ 			<div>
+ 				<div class="updateUserProfile" id="updateUserProfile" onclick="profile()"></div>
+ 			    <div id="logOut" onclick="logOut()">Log out</div>
+ 			</div>
+ 			
+ 	  </div>
+	  <div class="homeDetailsRight">
+	  	  <h3 id="companyUser">Welcome</h3>
+	  	  <h4 id="companyName">Company : </h4>	
+	  	  <div class="itemList">
+	  	  	<div>
+	  	  		<p id="openTaskCount"></p>
+	  	  		<h3 >Open Tasks</h3>
+	  	  	</div>
+	  	  	<div>
+	  	  	    <p id="closeTaskCount"></p>
+	  	  	    <h3>Close Tasks</h3>
+	  	  	</div>
+	  	  	<div>
+	  	  		<p id="openProjectCount"></p>
+	  	  		<h3>Open Project</h3>
+	  	  	</div>
+	  	  	<div>
+	  	  		<p id="closeProjectCount"></p>
+	  	  		<h3>Close Project</h3>
+	  	  	</div>
+	  	  	<div>
+	  	  		<p id="openIssueCount"></p>
+	  	  		<h3>Open Issues</h3>
+	  	  	</div>
+	  	  	<div>
+	  	  		<p id="closeIssueCount"></p>
+	  	  		<h3>Close Issues</h3>
+	  	  	</div>
+	  	  </div>
+	  	  
+	      <div class="addhomeInTeam" id="addhomeInTeam">
+	         <div class="openTask">
+	         	<h3>Open Tasks</h3>
+	         	<div id="openTaskList"></div>
+	         </div>
+	         <div class="closeTask">
+	         	<h3>Close Tasks</h3>
+	         	<div id="closeTaskList"></div>
+	         </div>
+	         <div class="openProject">
+	         	<h3>Open Project</h3>
+	         	<div id="openProjectList"></div>
+	         </div>
+	         <div class="closeProject">
+				 <h3>Close Project</h3> 
+				 <div id="closeProjectList"></div>       
+	         </div>
+	         <div class="openIssue">
+	         	<h3>Open Issues</h3>
+	         	<div id="openIssueList"></div>
+	         </div>
+	         <div class="closeIssue">
+	         	<h3>Close Issues</h3>
+	         	<div id="closeIssueList"></div>
+	         </div>
+	         <div class="dueProject">
+	         	<h3>Due date Projects</h3>
+	         	<div id="dueDateProject"></div>
+	         </div>
+	         <div class="todayDueDateProject">
+	            <h3>Work Items Due Today</h3>
+	            <div id="todayDueDateProject"></div>
+	         </div>
+	         
+	      </div>
+	  
+	  </div>
+	</div>
+	
+	
+	<div class="updateDetails" id="updateDetails">
+		<div class="updateProfile" id="updateProfile" onclick="updateDetailsPopUp()">Change Details</div>
+		<div class="changePassword" id="changePassword" onclick="changePasswordPopUp()">Change password</div>
+	    <div class="cancelButton" id="cancelButton" onclick="cancelButton()">Cancel</div>
+	</div>
+	
+	<div class="updateDetailsPopUp" id="updateDetailsPopUp">
+		<p>First Name</p>
+		<input type="text" id="updateUserName" name="updateUserName">
+		<br>
+		<p>Last Name</p>
+		<input type="text" id="updateLastName" name="updateLastName">
+		<br>
+		<p>Phone Number</p>
+		<input type="number" id="updatePhoneNumber" name="updatePhoneNumber">
+		
+		<div class="button">
+			<div class="updateUserDetailsButton" id="updateUserDetailsButton" onclick="updateUserDetailsButton()">Apply</div>
+			<div class="updateCancelUserDetailsButton" id="updateCancelUserDetailsButton" onclick="updateCancelUserDetailsButton()">Cancel</div>
+		</div>
+	</div>
+	
+	<div class="changeUserPasswordPopUp" id="changeUserPasswordPopUp">
+	    <p>Old Password</p>
+		<input type="text" id="oldPassword" name="oldPassword">
+		<p>New password</p>
+		<input type="text" id="newPassword" name="newPassword">
+		
+		<div class="button">
+			<div class="changePasswordButton" id="changePasswordButton" onclick="changePasswordButton()">Apply</div>
+			<div class="changePasswordCancelButton" id="changePasswordCancelButton" onclick="changePasswordCancelButton()">Cancel</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="home.js"></script>
+	<script type="text/javascript" src="logOut.js"></script>
+</body>
+</html>

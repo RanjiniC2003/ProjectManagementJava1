@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+    overflow-x: hidden; 
+}
+.homeDetails{
+	display: flex;
+	background-color: black;
+}
+.homeDetailsLeft{
+	width:220px;
+	height: 100vh;
+	background-color: rgb(31, 31, 31);
+}
+.homeDetailsLeft>div{
+	width: 220px;
+}
+.homeLogo{
+	display: flex;
+	padding-left: 15px;
+	align-items: center;
+	border-bottom: 1px solid #ffffff12;
+}
+.homeLogo>div{
+	background-image: url("images/projectsLogo.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    margin-right: 7px;
+}
+
+.manuHeads{
+	padding-left: 15px;
+    margin-top: 23px;
+}
+
+.companyMembers,.Team,.Project,.HeadTasks,.home,.issues{
+	
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.manuHeadTasks>a,.Team>a,.companyMembers>a,.Project>a,.issues>a{
+	text-decoration: none;
+	color: white;
+}
+.home>a{
+	color: #ff5722;
+	text-decoration: none;
+}
+    
+.homeLogo>h1 {
+    font-weight: 100;
+    font-size: 21px;
+    color: white;
+}   
+
+.homehead{
+	display: flex;
+	border-bottom: 1px solid #80808070;
+    height: 53px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    margin-left: 220px;
+    
+}
+.homehead>h6{
+	font-weight: 100;
+    padding-left: 30px;
+    color: #959595;
+    font-size: 17px;
+}
+#logOut{
+	background-color: rgb(255, 100, 0);
+    padding: 8px 40px;
+    border-radius: 15px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    display:block;
+}
+.homeDetailsRight{
+	color: white;
+    margin-top: 46px;
+    margin-left: 26px;
+}
+#companyUser{
+	color: #bdb8b8;
+    font-weight: 100;
+}
+#companyName{
+	color: gray;
+}
+.itemList{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.itemList>div{
+	width: 230px;
+    text-align: center;
+    margin-right: 32px;
+    background-color: #8080804a;
+    box-shadow: 0px 0px 0px 10px #897c7c1f;
+    height: 100px;
+}
+
+.itemList>div>h3{
+	color: #c1c1c1;
+    font-weight: 100;
+    
+}
+.addhomeInTeam{
+	display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    overflow-y: auto;
+    height: 67vh;
+    
+}
+.addhomeInTeam>div{
+	height: 370px;
+	background-color: #8080804a;
+    padding: 0px 20px;
+}
+.addhomeInTeam::-webkit-scrollbar,#openTaskList::-webkit-scrollbar,#closeTaskList::-webkit-scrollbar,#openProjectList::-webkit-scrollbar,#closeProjectList::-webkit-scrollbar,#openIssueList::-webkit-scrollbar,#closeIssueList::-webkit-scrollbar,#dueDateProject::-webkit-scrollbar,#todayDueDateProject::-webkit-scrollbar{
+    display: none;
+} 
+.addhomeInTeam>div>h3{
+	color: #dbd9d9;
+    font-weight: 100;
+}
+.mainDiv{
+    border-bottom: 1px solid #80808078;
+    color: #a19797;
+    font-size: 19px;
+}
+#openTaskList,#closeTaskList,#openProjectList,#closeProjectList,#openIssueList,#closeIssueList,#dueDateProject,#todayDueDateProject{
+	overflow-y:auto; 
+	height: 290px;
+}
+.updateUserProfile{
+	color: white;
+    font-weight: 600;
+    background-color: rgb(255, 100, 0);
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 20px;
+    padding: 10px 13px;
+    cursor: pointer;
+}
+.homehead>div{
+	display: flex;
+	align-items: center;
+}
+.updateDetails{
+	display: none;
+    position: absolute;
+    background-color:#383838;
+    top: 10%;
+    left: 74%;
+    color: white;
+    padding: 24px;
+    width: 300px;
+    height: 246px;
+}
+.updateDetails>div{
+	cursor: pointer;
+    font-size: 17px;
+    margin-bottom: 48px;
+    background-color: rgb(255, 100, 0);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    margin-left: 38px;
+    border-radius: 20px;
+	
+}
+
+.updateDetailsPopUp{
+	position: absolute;
+    top: 10%;
+    background-color: #383838;
+    left: 70%;
+    width: 360px;
+    height: 400px;
+    padding: 10px 34px;
+    display: none;
+}
+.updateDetailsPopUp>p,.changeUserPasswordPopUp>p{
+	color: #a7a2a2;
+    font-size: 20px;
+}
+.updateDetailsPopUp>input,.changeUserPasswordPopUp>input{
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid #645e5e;
+    width: 300px;
+    color: gray;
+    font-size: 17px; 
+}
+.button{
+	margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.button>div{
+	background-color: rgb(255, 100, 0);
+    color: white;
+    padding: 11px 28px;
+    font-weight: 600;
+    border-radius: 18px;
+}
+.changeUserPasswordPopUp{
+	position: absolute;
+    top: 10%;
+    background-color: #383838;
+    left: 70%;
+    width: 360px;
+    height: 322px;
+    padding: 10px 34px;
+    display: none;
+}
+/* .name{
+	color: green;
+}
+.parentName{
+	color: orange;
+}
+.startDate{
+	color: red;
+} */
+
+

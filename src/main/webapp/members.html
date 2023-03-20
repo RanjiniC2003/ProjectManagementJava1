@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>members</title>
+<link href="member.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="viewMembers()">
+	
+	<div class="memberDetails" id="memberDetails">
+	  <div class="memberDetailsLeft">
+	   	<div>
+	 		<div class="memberLogo">
+	 			<div></div>
+	 			<h1>Projects</h1>
+	 		</div>
+	 		<div class="manuHeads">
+	 			<div class="home"><a href="home.html" onclick="home()">Home</a></div>
+	 			<div class="companyMembers"><a href="members.html"  onclick="Members()">Members</a></div>
+	 			<div class="Team" ><a href="Team.html" onclick="team()">Teams</a></div>
+	 	
+	 			<div class="Project"><a href="project.html" onclick="projects()">Projects</a></div>
+	 			<div class="issues"><a href="issue.html" onclick="issue()">Issues</a></div>
+	 		
+	 			<div class="manuHeadTasks"><a href="taskSummary.html" onclick="tasks()">Tasks</a></div>
+	 			
+	 		</div>
+ 	    </div>
+	  </div>
+	  <div class="memberhead">
+ 			<h6>Issues</h6>
+ 			<div>
+	 			<div id="addUserPopup" onclick="addUserPopup()">Add Members</div>
+	 			<div id="logOut" onclick="logout()">Log out</div>
+ 			</div>
+ 			
+ 	  </div>
+	  <div class="memberDetailsRight">
+	      <div class="addMemberInTeam" id="addMemberInTeam"></div>
+	  
+	  </div>
+	</div>
+  
+  
+    <div class="memberAddPopUp" id="memberAddPopUp">
+    	<h3>Add User</h3>
+    	<div class="addEmpInput">
+    	    <p>User Email<span>*</span></p>
+    		<input type="text" id="requestEmail" name="requestEmail">
+    	</div>
+    	<div class="empButtons">
+    		<div class="empAddButton" onclick="empAddButton()">Add</div>
+    	    <div class="empAddCancelButton" onclick="empAddCancelButton()">Cancel</div>
+    	</div>
+    	
+    	
+    </div>
+    
+    
+   <!--  <div class="memberUpdatePopup" id="memberUpdatePopup">
+    	<h1>User Information</h1>
+    	<div class="updateFName">
+    		<p>FirstName</p>
+    		<input id="updateFirstName" name="updateFirstName" type="text">
+    	</div>
+    	<div class="updateLName">
+    		<p>LastName</p>
+    		<input id="updateLastName" name="updateLastName" type="text">
+    	</div>
+    	<div class="updateNum">
+    		<p>Phone Number</p>
+    		<input id="updatePhoneNum" class="updatePhoneNum">
+    	</div>
+    	
+    	<div class="ChangePassword" id="changePassword" onclick="ChangePassword()">Change Password</div>
+    	
+    	
+    </div> -->
+    
+    <script type="text/javascript" src = "member.js"></script>
+  	<script type="text/javascript" src="logOut.js"></script>
+</body>
+</html>

@@ -1,0 +1,810 @@
+@charset "UTF-8";
+
+body{
+	padding:0px;
+	margin:0px;
+	font-family: sans-serif;
+	overflow-x: hidden;
+}
+
+.header{
+	height: 50px;
+    display:flex;	
+    align-items: center;
+    justify-content: space-between;
+	
+}
+.sign{
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+}
+
+.sign-up{
+	background: rgb(240, 72, 62);
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sign-in{
+	color:rgb(240, 72, 62);
+	cursor: pointer;
+	text-decoration: none;
+}
+.zohologo{
+	background-image: url("images/zohoLogo.png");
+	width: 93px;
+    height: 39px;
+    background-size: 100% 100%;
+    margin-left: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.projectLogo{
+	position: absolute;
+    top: 114px;
+    left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.projectLogo>div {
+	background-image: url("images/projectsLogo.png");
+	    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    margin-right: 5px;
+}
+
+
+.projectLogo>h1{
+	font-weight: bold;
+	    font-size: 24px;
+}
+
+.details-left{
+	
+    flex: 1;
+    margin-left: 100px;
+    margin-top: 353px;
+    margin-right: 127px;
+} 
+
+.details-left>p{
+	letter-spacing: 0px;
+    line-height: 27px;
+}
+.details-left>h1{
+	font-size: 36px;
+}
+
+.details{
+	    background: rgb(224, 242, 255);
+	    height: 900px;
+	    display: flex;
+}
+.details-right>div{
+	background-image:url("images/mainImg.png");
+	width: 957px;
+    background-size: 100% 100%;
+    height: 603px;
+    margin-right: 100px;
+    margin-top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.zohoLogoHead{
+	background-image: url(images/zohoLogo1.png);
+    background-size: 100% 100%;
+    margin-left: 14px;
+    height: 51px;
+    width: 107px;
+    margin-top:40px;
+    
+}
+
+.signUpPage{
+	display: flex;
+}
+.signUpLeft{
+	background-image: url("images/signup-bg.jpg");
+	height:100vh;
+    width: 350px;
+    background-size: 100% 100%;
+}
+
+
+.projec-logo>div {
+	background-image: url("images/projectsLogo.png");
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    margin-right: 5px;
+}
+
+.projec-logo>h1{
+	font-weight: bold;
+	    font-size: 24px;
+}
+.projec-logo{
+	
+    display: flex;
+    align-items: center;
+    
+}
+.signUpRight>h6{
+	font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.signUpRight>input{
+	margin: 0px 0px 30px 0px;
+    width: 450px;
+    height: 37px;
+    border-radius: 5px;
+    border: 1px solid #353232;
+    color: gray;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.signUpRight{
+	padding-top: 150px;
+    margin-left: 100px;
+}
+.signUpButton{
+	    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: red;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.feedback,.feedback-details{
+	color: white;
+	text-align: center;
+    padding: 24px;
+        margin-top: 160px;
+}
+.feedback>h6,.feedback-details>h6{
+	 font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-weight: 100;
+}
+.feedback>p,.feedback-details>p{
+	    font-size: 11px;
+    color: #03a9f4;
+}
+.feedback>div{
+	background-image: url("images/nathan.png");
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    margin-left: 123px;
+}
+
+.sivaPic{
+	background-image: url("images/siva.jpg");
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    margin-left: 123px;
+}
+
+
+.result{
+	color: red;
+    margin-top: 22px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.taskSummaryLogo>h1{
+	font-weight: 100;
+    font-size: 21px;
+	color: white;
+}
+
+.taskSummaryLogo>div{
+	background-image: url("images/projectsLogo.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    margin-right: 7px;
+}
+.taskSummary{
+	display: flex;
+	background-color:black;
+}
+.taskSummaryLeft{
+	width:220px;
+	height: 100vh;
+	background-color: rgb(31, 31, 31); 
+}
+.taskSummaryLogo{
+	display: flex;
+	padding-left: 15px;
+	align-items: center;
+	border-bottom: 1px solid #ffffff12;
+}
+.manuHeads{
+	padding-left: 15px;
+    margin-top: 23px;
+}
+.taskSummaryhead{
+	display: flex;
+	border-bottom: 1px solid #80808052;
+    height: 53px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    margin-left: 219px;
+    
+    
+}
+.taskSummaryLeft>div{
+	width: inherit;
+}
+/* .taskSummaryRight{
+	margin-left: 216px;
+	
+} */
+.taskStatusOption{
+	overflow-x: auto;
+    display: flex;
+    scroll-behavior: smooth;
+}
+.taskSummaryhead>h6{
+	font-size: 19px;
+    font-weight: 100;
+    padding-left: 30px;
+    color: #b2b2b2;
+}
+.taskSummaryhead>div>div{
+	background-color: rgb(255, 100, 0);
+    padding: 8px 40px;
+    border-radius: 15px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+}
+.taskSummaryhead>div{
+	display: flex;
+}
+/* 
+.taskSummaryhead{
+	display: flex;
+} */
+
+.closed{
+	background-color: rgb(245, 107, 98);
+}
+.open{
+	background-color: rgb(116, 203, 128);
+}
+.inProcess{
+	background-color: rgb(8, 174, 234);
+}
+.cancelled{
+	background-color: rgb(85, 141, 202);
+}
+.inReview{
+	background-color: rgb(140, 186, 187);
+}
+.toBeTested{
+	background-color: rgb(246, 169, 109);
+}
+.onHold{
+	background-color:rgb(251, 193, 30);
+}
+.delayed{
+	background-color: rgb(197, 160, 112);
+}
+.closed,.open,.inProcess,.cancelled,.inReview,.toBeTested,.onHold,.delayed{
+	
+   padding: 6px 23px;
+    color: white;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    width: fit-content;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.task>div{
+	height: 86vh;
+	width: 300px;
+	/* background-color: rgb(223, 230, 233); */
+	background-color: rgb(34, 34, 34);
+	margin-right: 15px;
+	padding: 14px;
+	border-radius: 8px;
+}
+
+.closedTaskDetailsImg,.openTaskDetailsImg,.inProcessTaskDetailsImg,.cancelledTaskDetailsImg,.inReviewTaskDetailsImg,.toBeTestedTaskDetailsImg,.onHoldTaskDetailsImg,.delayedTaskDetailsImg{
+	background-image: url(images/taskSummary.svg);
+    width: 220px;
+    height: 120px;
+    background-size: 100% 100%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 34px;
+    filter: brightness(0.55);
+}
+.closedTaskDetailsHead,.openTaskDetailsHead,.inProcessTaskDetailsHead,.cancelledTaskDetailsHead,.inReviewTaskDetailsHead,.toBeTestedTaskDetailsHead,.onHoldTaskDetailsHead,.delayedTaskDetailsHead{
+	color: #808080a1;
+    font-size: 18px;
+    padding: 0px 26px;
+    line-height: 23px;
+}
+.closedTaskDetails,.OpenTaskDetails,.inProcessTaskDetails,.inCancelledTaskDetails,.inReviewTaskDetails,.toBeTestedTaskDetails,.onHoldTaskDetails,.delayedTaskDetails{
+	text-align: center;
+}
+
+.taskStatusOption::-webkit-scrollbar,.addOpenTask::-webkit-scrollbar{
+  display: none;
+} 
+.overflow{
+	overflow-x: auto;
+    margin-top: 84px;
+    margin-left: 30px;
+    scroll-behavior: smooth;
+    width: 1540px;
+}
+
+
+.addOpenTask{
+	height: 95%;
+    overflow-y: auto;
+    scroll-behavior: smooth; 
+}
+
+
+.taskInputs>p{
+   color: #a6a6a6;
+}
+
+.newTaskHead>h3{
+	color:white;
+}
+
+
+.addTaskPopUp{
+	width: 734px;
+	box-shadow: 0px 0px 10px 0px #8080803b;
+    background-color: rgb(40, 40, 40);
+    padding: 15px 30px;
+    transform: translateX(-100%);
+    border-radius: 15px;
+    position: absolute;
+    top: 10%;
+    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1) 0s;
+}
+
+.NewTaskName>span{
+	color: red;
+}
+
+.taskInputs>input{
+	border: 1px solid #80808033;
+	width: 500px;
+    height: 32px;
+    background-color: transparent;
+    color: #ffffffc7;
+}
+
+.taskInputs>textarea {
+	border: 1px solid #80808033;
+	width: 500px;
+    height: 150px;
+    background-color: transparent;
+    color: #ffffffc7;
+}
+.taskInputs>select {
+	border: 1px solid #80808033;
+    width: 184px;
+    height: 34px;
+    color: #ffffffc7;
+    background-color: transparent;
+    font-size: 16px;
+}
+.taskInputs>select>option,.status>select>option,.priority>option,.completePercentage>select>option{
+	background-color: black;
+    color: gray;
+    font-size: 15px;
+}
+.newTaskAdd,.updateDatasSave{
+	background-color: rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: fit-content;
+	
+}
+.newTaskFooter{
+	display: flex;
+	margin-top: 30px;
+}
+
+.newTaskCancel,.updatePopUpClose{
+	border:1px solid rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color:rgb(255, 100, 0);
+    margin-right: 36px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+input:focus{
+	border:1px solid rgb(255, 100, 0);
+}
+.containerBox{
+	background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+    height: 150px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.defaultImg,.lowImg,.highImg,.mediumImg{
+    background-size: 100% 100%;
+	width: 34px;
+    height: 25px;
+}
+.defaultImg{
+	background-image:url("images/default.png");
+}
+.lowImg{
+	background-image:url("images/low.png");
+}
+.highImg{
+	background-image:url("images/high.png");
+}
+.mediumImg{
+	background-image:url("images/medium.png");
+}
+.priorityDateDiv{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #8080807a;
+    padding-top: 7px;
+}
+.startDateDiv{
+	font-size: 12px;
+    color: red;
+}
+.taskNameDiv{
+	color: #808080bf;
+    letter-spacing: 1px;
+    margin-bottom: 19px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.descriptionId{
+	margin-bottom: 69px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+}
+.newTaskUpdates{
+	display: flex;
+	background-color: black;
+    width: 96%;
+    height: 97%;
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    transform: translateY(-200%);
+    transition: all 0.5s;
+    
+}
+.taskCount{
+	margin-left: 5px;
+}
+.newTaskUpdatesLeft{
+	width: 340px;
+    background-color: white;
+    background-color: rgb(34, 34, 34);
+}
+ .newTaskUpdatesList{
+	cursor: pointer;
+	
+} 
+.smallListHead{
+	border-bottom: 1px solid #80808038;
+	padding-bottom: 20px;
+	padding-bottom: 20px;
+    font-weight: 100;
+    font-size: 17px;
+    padding-left: 21px;
+    color: orange;
+}
+.userDate{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.userEmail{
+	color: #808080ed;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.taskHead{
+	margin-left: 20px;
+    margin-bottom: 10px;
+    color: green;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.newTaskUpdatesList{
+	border-bottom: 1px solid #80808038;
+	margin-top: 10px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.newTaskUpdatesRight{
+	padding: 15px 38px 0px 52px;
+	flex: 1;
+}
+.newTaskHeads>div>p{
+	margin-bottom: 5px;
+    color: gray;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.newTaskHeads>div>input{
+	background-color: transparent;
+	color: #ffffffc7;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.newTaskCurrentStatus,.des,.taskInformation{
+	background-color: rgb(34, 34, 34);
+    box-shadow: 0px 0px 0px 45px #80808000;
+    padding: 10px 31px;
+    margin-top: 15px;
+}
+.newTaskCurrentStatus>p{
+	color: #808080ad;
+    font-size: 15px;
+        
+}
+.des>p,.taskInformation>p{
+	font-size: 20px;
+	color: #808080ad;
+}
+.taskInfo{
+	display: flex;
+}
+.taskInfoLeft{
+	width: 500px;
+}
+.assignedTo,.status,.duration,.startDate,.dueDate,.priorityList,.completePercentage{
+   margin-bottom: 10px;
+}
+.assignedTo>p,.status>p,.duration>p,.startDate>p,.dueDate>p,.priorityList>p,.completePercentage>p{
+	color: #808080c2;
+    margin-bottom: 7px;
+}
+.assignedTo>input {
+	border: 1px solid #80808057;
+    padding: 9px;
+    width: 300px;
+    color: #ffffff94;
+    background-color: transparent;
+    font-size: 16px;
+}
+#changeStatus,.priority,.comPer{
+	border: 1px solid #8080804a;
+    background-color: transparent;
+    color: #afadad;
+    padding: 9px;
+    width: 220px;
+    font-size: 16px;
+}
+#currentStatus{
+	 background-color: transparent;
+    color:gray;
+    padding: 9px;
+    width: 220px;
+}
+.startda,.dueda{
+	border: 1px solid #80808063;
+    padding: 10px;
+    width: 256px;
+    background-color: transparent;
+    color: #ffffff94;
+}
+.button{
+	display: flex;
+	margin-top: 10px;
+}
+#updateDescription{
+	border: 1px solid #8080808f;
+    color: #ffffff96;
+    padding-top: 10px;
+    background-color: transparent;
+    font-size: 16px;
+}
+#newTaskHeads{
+	padding: 10px;
+    width: 300px;
+    border: 1px solid #8080809e;
+}
+#duration{
+   color: #ffffffe8;
+}
+.companyMembers,.Team,.Project,.home,.issues{
+	
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.companyMembers>a,.Team>a,.Project>a,.home>a,.issues>a{
+	text-decoration: none;
+	color: white;
+}
+    
+.manuHeadTasks>a{
+	color: #ff5722;
+	cursor: pointer;
+	text-decoration: none;
+}
+.manuHeadTasks{
+	margin-bottom: 15px;
+}    
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(0.8);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1
+}
+#smallListCount{
+	color: orange;
+}
+
+#projectDropDown,#newtaskAssignedTo{
+	width: 500px;
+}
+.newTaskHeads{
+	display: flex;
+    justify-content: space-between;
+    margin-right: 203px;
+    align-items: center;
+}
+#pn{
+	color: #ffffffe6;
+    margin-top: 12px;
+}
+#assignedTodeails{
+	border: 1px solid #80808033;
+    width: 400px;
+    height: 34px;
+    color: #ffffffc7;
+    background-color: transparent;
+    font-size: 16px;
+}
+   
+ #assignedTodeails>option{
+	background-color: black;
+    color: gray;
+    font-size: 15px;
+}  
+   
+/* 
+ input[type=date]::-webkit-datetime-edit-text {
+	-webkit-appearance:none;
+	display: none;
+} 
+
+input[type=date]::-webkit-datetime-edit-month-field {
+	-webkit-appearance:none;
+	display: none;
+} 
+
+input[type=date]::-webkit-datetime-edit-day-field {
+	-webkit-appearance:none;
+	display: none;
+} 
+
+input[type=date]::-webkit-datetime-edit-year-field {
+	-webkit-appearance:none;
+	display: none;
+} 
+
+input[type=date]:required:invalid::-webkit-datetime-edit{
+	color: transparent;
+}
+
+input[type=date]:focus::-webkit-datetime-edit{
+	color: black !important;
+}
+
+input:focus::-webkit-datetime-edit{
+	color: black !important;
+} */

@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+    overflow-x: hidden; 
+}
+.issueDetails{
+	display: flex;
+	background-color: black;
+}
+.issueDetailsLeft{
+	width:220px;
+	height: 100vh;
+	background-color: rgb(31, 31, 31);
+}
+.issueDetailsLeft>div{
+	width: 220px;
+}
+.issueLogo{
+	display: flex;
+	padding-left: 15px;
+	align-items: center;
+	border-bottom: 1px solid #ffffff12;
+}
+.issueLogo>div{
+	background-image: url("images/projectsLogo.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    margin-right: 7px;
+}
+
+.manuHeads{
+	padding-left: 15px;
+    margin-top: 23px;
+}
+
+.companyMembers,.Team,.Project,.HeadTasks,.home,.issues{
+	
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.manuHeadTasks>a,.Team>a,.companyMembers>a,.Project>a,.home>a{
+	text-decoration: none;
+	color: white;
+}
+.issues>a{
+	color: #ff5722;
+	text-decoration: none;
+}
+    
+.issueLogo>h1 {
+    font-weight: 100;
+    font-size: 21px;
+    color: white;
+}   
+
+.issuehead{
+	display: flex;
+	border-bottom: 1px solid #80808070;
+    height: 53px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    margin-left: 220px;
+    
+}
+.issuehead>h6{
+	font-weight: 100;
+    padding-left: 30px;
+    color: #959595;
+    font-size: 17px;
+}
+.issuehead>div>div{
+	background-color: rgb(255, 100, 0);
+    padding: 8px 40px;
+    border-radius: 15px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    display:block;
+}
+.issuehead>div{
+	display: flex;
+}
+.addIssuePopUp>p{
+	color: #a0a0a0;
+	margin-bottom: 10px;
+}
+.addIssuePopUp{
+	width: 600px;
+	box-shadow: 0px 0px 10px 0px #8080803b;
+    position: absolute;
+    padding: 15px 30px;
+    transform: translateX(300%);
+    border-radius: 15px;
+    position: absolute;
+    top: 6%;
+    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1) 0s;
+    background-color: rgb(40, 40, 40);
+    height: 85vh;
+    overflow-y: auto;
+}
+.addIssuePopUp::-webkit-scrollbar{
+    display: none;
+} 
+.addIssuePopUp>p>span{
+	color: red;
+	margin-left: 5px;
+}
+.addIssuePopUp>input {
+	border: 1px solid #8080808a;
+    padding: 8px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #b1aaaa;
+    font-size: 17px;
+}
+.addIssuePopUp>h3{
+	color: #c3c3c3;
+}
+
+
+
+#projectName,#assignTo,#severity,#classification,#reproducible,#flag{
+	border: 1px solid #8080804a;
+    background-color: transparent;
+    color: #afadad;
+    padding: 9px;
+    width: 420px;
+    font-size: 16px;
+}
+#projectName>option,#assignTo>option,#severity>option,#classification>option,#reproducible>option,#flag>option{
+	background-color: black;
+    color: gray;
+    font-size: 15px;
+}
+.issueUpdatePopUp{
+	display: flex;
+    background-color: black;
+    width: 96%;
+    height: 95vh;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    transform: translateY(-200%);
+    transition: all 0.5s;
+    overflow-y: auto;
+}
+.issueUpdatePopUp::-webkit-scrollbar,.issueUpdatePopUpRight::-webkit-scrollbar,.smallIssueListBox::-webkit-scrollbar{
+    display: none;
+}
+.issueUpdatePopUp>div>p,.issueUpdatePopUp>div>div>div>p{
+	margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.issueUpdatePopUp>div>input,.issueUpdatePopUp>div>div>div>input{
+	background-color: transparent;
+    color: #ffffffc7;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #8080809e;    
+}
+.issueUpdatePopUp>div>textarea{
+	background-color: transparent;
+    box-shadow: 0px 0px 0px 45px #80808000;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #cfcfcf;
+}
+.issueUpdatePopUp>div>select{
+	border: 1px solid #8080804a;
+    background-color: transparent;
+    color: #afadad;
+    padding: 9px;
+    width: 220px;
+    font-size: 16px;
+}
+.issueUpdatePopUp>div>select>option{
+	background-color: black;
+    color: gray;
+    font-size: 15px;
+}
+
+.updateDatasSave,.issueAddButton{
+	background-color: rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: fit-content;
+	
+}
+.updatePopUpClose,.issueAddCancelButton{
+	border:1px solid rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color:rgb(255, 100, 0);
+    margin-right: 36px;
+    cursor: pointer;
+    width: fit-content;
+}
+.button,.issueButtons{
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.issueUpdatePopUpleft{
+	width: 340px;
+    background-color: rgb(34, 34, 34);
+}
+.classificationHead{
+	border-bottom: 1px solid #80808038;
+    padding-bottom: 20px;
+    font-weight: 100;
+    font-size: 17px;
+    padding-left: 21px;
+    color: orange;
+}
+.classificationCount{
+	color: orange;
+}
+.issueSmallList{
+	border-bottom: 1px solid #80808038;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.issueUpdatePopUpRight{
+	padding: 15px 38px 0px 52px;
+    flex: 1;
+    overflow-y: auto;
+}
+.issueProject{
+	display: flex;
+    justify-content: space-between;
+    margin-right: 170px;
+}
+.addIssuePopUp>textarea {
+	color: #bfbfbf;
+    background-color: transparent;
+    font-size: 17px;
+    border-color: #545454;
+}
+
+.addIssueHead{
+	width: 2520px;
+    font-size: 19px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff8a;
+    border-bottom: 1px solid #8080806e;
+}
+.issueNameHead,.issueDescript,.issueProjectName,.issueAssignTo,.issueStartDate,.issueDueDate,.issueStatus,.issueSeverity,.issueclassification,.issuereproducible,.issueflag{
+	text-align: center;
+}
+.issueNameHead,.showIssueName{
+    width: 190px;
+}
+.issueDescript,.showIssueDes{
+	width: 215px;
+}
+.issueProjectName,.showprojectName{
+	width: 215px;
+}
+.issueAssignTo,.showassignTo{
+	width: 330px;
+}
+.issueStartDate,.showstartDate{
+	width: 220px;
+}
+.issueDueDate,.showdueDate{
+	width: 220px;
+}
+.issueStatus,.showstatus{
+	width: 200px;
+}
+.issueSeverity,.showseverity{
+	width: 210px;	
+}
+.issueclassification,.showclassification{
+	width: 250px;
+}
+.issuereproducible,.showreproducible{
+	width: 240px;
+}
+.issueflag,.showflag{
+	width: 230px;
+}
+.issueDetailsRight{
+    padding: 22px 20px 30px 0px;
+    overflow-x: auto;
+    height: 87vh;
+    margin-top: 34px;
+}
+
+.noneImg,.minorImg,.criticalImg,.majorImg{
+    background-size: 100% 100%;
+	width: 34px;
+    height: 25px;
+}
+.noneImg{
+	background-image:url("images/default.png");
+}
+.minorImg{
+	background-image:url("images/low.png");
+}
+.criticalImg{
+	background-image:url("images/high.png");
+}
+.majorImg{
+	background-image:url("images/medium.png");
+}
+
+.issueBox{
+	display: flex;
+    align-items: center;
+    height: 45px;
+    border-bottom: 1px solid #80808085;
+    color: #808080f0;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+   
+}
+.addissue{
+	 width: 2520px
+}
+.smallIssueListBox{
+	overflow-x:auto; 
+    border-bottom: 1px solid #80808069;
+    padding: 0px 20px;
+	
+}
+.smallListIssueName{
+	color: green;
+}
+.smallListIssueAssignTo{
+	color: orange;
+}
+.smallListIssueStartDate{
+	color: red;
+}
+.issueUpdatePopUp>div>p{
+	color: gray;
+}
+.issueProject>div{
+	color: gray;
+}
+#updateProject{
+    font-size: 21px;
+    color: #f5f0f0;
+
+}

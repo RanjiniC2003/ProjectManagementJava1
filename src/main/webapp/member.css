@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+    overflow-x: hidden; 
+}
+.memberDetails{
+	display: flex;
+    background-color:rgb(0, 0, 0)
+}
+.memberDetailsLeft{
+	width:220px;
+	height: 100vh;
+	background-color: rgb(31, 31, 31);
+}
+
+.memberLogo{
+	display: flex;
+	padding-left: 15px;
+	align-items: center;
+	border-bottom: 1px solid #ffffff12;
+}
+.memberLogo>div{
+	background-image: url("images/projectsLogo.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    margin-right: 7px;
+}
+
+.manuHeads{
+	padding-left: 15px;
+    margin-top: 23px;
+}
+
+.companyMembers,.Team,.Project,.manuHeadTasks,.home,.issues{
+	
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.manuHeadTasks>a,.Team>a,.Project>a,.home>a,.issues>a{
+	text-decoration: none;
+	color: white;
+}
+.companyMembers>a{
+	color: #ff5722;
+	text-decoration: none;
+}
+    
+ .memberLogo>h1 {
+    font-weight: 100;
+    font-size: 21px;
+    color: white;
+}   
+
+.memberhead{
+	display: flex;
+	border-bottom: 1px solid #80808052;
+    height: 53px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    margin-left: 219px;
+    
+}
+.memberhead>h6{
+	font-size: 17px;
+	font-weight: 100;
+	padding-left: 30px;
+	color: #ffffffba;
+}
+#addUserPopup,#logOut{
+	background-color: rgb(255, 100, 0);
+    padding: 8px 40px;
+    border-radius: 15px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    
+}
+#addUserPopup{
+	display: none;
+}
+.memberhead>div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.empButtons{
+	display: flex;
+	margin-top: 20px;
+}
+.empAddButton{
+	background-color: rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: fit-content;
+	
+}
+.empAddCancelButton{
+	border:1px solid rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color:rgb(255, 100, 0);
+    margin-right: 36px;
+    cursor: pointer;
+    width: fit-content;
+    
+}
+
+.memberAddPopUp{
+	width: 500px;
+	box-shadow: 0px 0px 10px 0px #8080803b;
+    background-color: rgb(40, 40, 40);
+    padding: 15px 30px;
+    transform: translateX(330%);
+    border-radius: 15px;
+    position: absolute;
+    top: 10%;
+    left:3%;
+    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1) 0s;
+}
+
+.memberAddPopUp>h3{
+	color: #bdbdbd;
+}
+.addEmpInput>p>span{
+	color: red;
+	margin-left: 5px;
+}
+.addEmpInput>p{
+	 color: gray;
+}
+.addEmpInput>input {
+	border: 1px solid #8080808a;
+    padding: 8px;
+    width: 338px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: gray;
+    font-size: 19px;
+}
+.addMemberInTeam {
+    padding: 108px 123px 10px 123px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+}
+.memberBox{
+	padding: 18px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 7px;
+    width: 287px;
+    color: gray;
+}
+.empName{
+	font-size: 20px;
+    font-weight: 200;
+    color: white;
+}
+.lastAccess{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

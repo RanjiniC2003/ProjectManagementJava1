@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+    overflow-x: hidden; 
+}
+.teamDetails{
+	display: flex;
+	background-color: black;
+}
+.teamDetailsLeft{
+	width:220px;
+	height: 99.9vh;
+    border-bottom: 1px solid #80808061;
+    background-color: rgb(31, 31, 31);
+}
+
+.teamLogo{
+	display: flex;
+	padding-left: 15px;
+	align-items: center;
+	border-bottom: 1px solid #ffffff12;
+}
+.teamLogo>div{
+	background-image: url("images/projectsLogo.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    margin-right: 7px;
+}
+
+.manuHeads{
+	padding-left: 15px;
+    margin-top: 23px;
+}
+
+.companyMembers,.Team,.Project,.HeadTasks,.home,.issues{
+	
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.manuHeadTasks>a,.Project>a,.companyMembers>a,.home>a,.issues>a{
+	text-decoration: none;
+	color: white;
+}
+.Team>a{
+	color: #ff5722;
+	text-decoration: none;
+}
+    
+.teamLogo>h1 {
+    font-weight: 100;
+    font-size: 21px;
+    color: white;
+}   
+
+.teamhead{
+	display: flex;
+	border-bottom: 1px solid #80808052;
+	
+    height: 53px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: -webkit-fill-available;
+    margin-left: 219px;
+    
+}
+.teamhead>h6{
+	font-size: 17px;
+	font-weight: 100;
+	padding-left: 30px;
+	color: #c6c5c5;
+}
+.teamhead>div>div{
+	background-color: rgb(255, 100, 0);
+    padding: 8px 40px;
+    border-radius: 15px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+   
+}
+.teamhead>div{
+	display: flex;
+}
+#addTeampopup{
+   display: none;
+}
+
+.teamButtons{
+	display: flex;
+	margin-top: 60px;
+}
+.teamAddButton{
+	background-color: rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: fit-content;
+	
+}
+.teamAddCancelButton{
+	border:1px solid rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color:rgb(255, 100, 0);
+    margin-right: 36px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.teamAddPopUp{
+	width: 517px;
+    height: 70%;
+    box-shadow: 0px 0px 10px 0px #8080803b;
+    background-color: rgb(40, 40, 40);
+    padding: 45px 30px 15px 87px;
+    transform: translateX(300%);
+    border-radius: 15px;
+    position: absolute;
+    top: 10%;
+    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1) 0s;
+}
+.addTeamInput>p>span{
+	color: red;
+	margin-left: 5px;
+}
+.addTeamInput>input {
+	border: 1px solid #8080808a;
+    padding: 8px;
+    width: 338px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #bdbdbd;
+    font-size: 17px;
+}
+.addTeamInput>p{
+	color: #a2a1a1;
+}
+.teamAddPopUp>h3{
+	color: #ffffffcf;
+}
+.mult-select-tag .body{
+	width: 355px !important;
+	border: 1px solid #4c4a4a !important;
+    border-radius: 2px !important;
+}
+.input-container{
+	background-color:rgb(40, 40, 40)!important;
+}
+.btn-container{
+	background-color:rgb(40, 40, 40)!important;
+}
+.mult-select-tag button:first-child{
+	color: gray !important;
+}
+.mult-select-tag .btn-container{
+	border-left: 1px solid #4c4a4a !important;
+}
+.drawer{
+	background-color: #282828 !important;
+}
+.mult-select-tag ul li{
+	color: #959595 !important;
+}
+.mult-select-tag .rounded{
+	margin-top:15px !important;
+	border: 1px solid gray !important;
+	
+}
+.mult-select-tag .input{
+   border: 1px solid gray !important;
+}
+
+.mult-select-tag ul li:hover{
+    background-color: #ffffff1a !important;
+}
+.viewTeamInCompany{
+	padding: 110px 20px 30px;
+	display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 20px;
+}
+.teamBox{
+	cursor: pointer;
+    padding: 18px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 7px;
+    width: 270px;
+    color: gray;
+    text-align: center;
+    height: 175px;
+}
+.teamLead,.createBy{
+	overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.teamName{
+	color: #b6b6b6;
+}
+#updatePopup{
+	background-color: rgb(40, 40, 40);
+    color: white;
+    position: absolute;
+    transform: translateY(-150%);
+    top: 0%;
+    width: 94%;
+    height: 91%;
+    left: 3%;
+    transition: all 0.5s;
+}
+.button {
+    display: flex;
+    margin-top: 50px;
+}
+.updateDatasSave{
+	background-color: rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    color: white;
+    margin-right: 36px;
+    cursor: pointer;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: fit-content;
+    display: none;
+    padding-top: 9px;
+    height: 25px;
+}
+.updatePopUpClose{
+	border:1px solid rgb(255, 100, 0);
+    padding: 0px 23px;
+    border-radius: 17px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color:rgb(255, 100, 0);
+    margin-right: 36px;
+    cursor: pointer;
+    width: fit-content;
+}
+#teamLogo{
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: orange;
+    color: white;
+    font-weight: 600;
+    margin: 0px 13px;
+}
+.teamHead{
+	display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+.teamHeading{
+	font-size: 18px;
+    font-weight: 600;
+    color: #eaeaea;
+}
+.totalTeamUser{
+	border-bottom: 1px solid #8080805c;
+	padding-bottom: 12px;
+    padding-left: 10px;
+    color: gray;
+}
+.teamLeadInTeam,.teamUsersInTeam{
+	border-bottom: 1px solid #8080805c;
+	padding-left: 21px;
+	padding-bottom: 12px;
+}
+.teamLeadDetails,.teamUserDetailsInTeam{
+	color: #939393;
+}
+#userInTeam{
+	display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+}
+.teamUserDetailsInTeam{
+	width: 210px;
+    overflow: hidden;
+    border: 1px solid #80808059;
+    padding: 10px;
+}
+#createteamLead,#updateteamLead{
+	border: 1px solid #80808033;
+    width: 400px;
+    height: 34px;
+    color: #ffffffc7;
+    background-color: transparent;
+    font-size: 16px;
+}
+#updateteamLead{
+	pointer-events: none;
+}
+   
+ #createteamLead>option,#updateteamLead>option{
+	background-color: black;
+    color: gray;
+    font-size: 15px;
+}  
+#createteamLead{
+	width: 358px;
+    height: 40px;
+}
+.mult-select-tag{
+	pointer-events: none;
+}

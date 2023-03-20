@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Team</title>
+<link href="team.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+</head>
+<body onload="createTeam()">
+    
+    <div class="teamDetails" id="teamDetails">
+	  <div class="teamDetailsLeft">
+	   	<div>
+	 		<div class="teamLogo">
+	 			<div></div>
+	 			<h1>Projects</h1>
+	 		</div>
+	 		<div class="manuHeads">
+	 			<div class="home"><a href="home.html" onclick="home()">Home</a></div>
+	 			<div class="companyMembers"><a href="members.html"  onclick="Members()">Members</a></div>
+	 			<div class="Team" ><a href="Team.html" onclick="team()">Teams</a></div>
+	 	
+	 			<div class="Project"><a href="project.html" onclick="projects()">Projects</a></div>
+	 			<div class="issues"><a href="issue.html" onclick="issue()">Issues</a></div>
+	 		
+	 			<div class="manuHeadTasks"><a href="taskSummary.html" onclick="tasks()">Tasks</a></div>
+	 		</div>
+ 	    </div>
+	  </div>
+	  <div class="teamhead">
+ 			<h6>Teams</h6>
+ 			<div>
+ 			   <div id="addTeampopup" onclick="addTeamPopup()">Add Team</div>
+ 			   <div id="logOut" onclick="logOut()">Log out</div>
+ 			</div>
+ 	  </div>
+	  <div class="teamDetailsRight">
+	    <div class="viewTeamInCompany" id="viewTeamInCompany"></div>
+	  </div>
+	</div>
+  
+  
+    <div class="teamAddPopUp" id="teamAddPopUp">
+    	<h3>Add Team</h3>
+    	<div class="addTeamInput">
+    	    <p>Team Name<span>*</span></p>
+    		<input type="text" id="teamName" name="teamName	">
+    		<br>
+    		<p>Team Lead</p>
+    		
+    		<select id="createteamLead" name="createteamLead" oninput="addTeamLead('create')"></select>
+    		
+    		
+    		<!--  <div id="l">
+    		   <select id="createteamLead" name="createteamLead" multiple></select>
+     		 </div> -->
+    		<br>
+    		<p>Team Users</p>
+    		
+    		
+    		
+	        <div id="u">
+    		  <select id="createteamUser" name="createteamUser" multiple></select>
+    	    </div> 
+    
+    		<br>
+    		
+    	
+    	</div>
+    	<div class="teamButtons">
+    		<div class="teamAddButton" onclick="teamAddButton()">Add</div>
+    	    <div class="teamAddCancelButton" onclick="teamAddCancelButton()">Cancel</div>
+    	</div>
+    </div>
+    
+    
+    
+    <div class="updatePopup" id="updatePopup">
+    	<div class="teamHead">
+    	    <div id="teamLogo"></div>
+    		<div class="teamHeading" id="teamHeading"></div>
+    		
+    	</div>
+    	<div class="totalTeamUser" id="totalTeamUser">Total team Users<span id="userCount"></span></div>
+    	
+    	<div class="teamLeadInTeam" id="teamLeadInTeam">
+    		<p>Team Lead</p>
+    		<div class="teamLeadDetails" id="teamLeadDetails">
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="teamUsersInTeam" id="teamUsersInTeam">
+    		<p>Team Users</p>
+    		<div id="userInTeam"></div>
+    	</div>
+    	
+    	<p>Team Lead</p>
+    	
+    	<select id="updateteamLead" name="updateteamLead" oninput="addTeamLead('update')"></select>
+    	
+<!--    		<div id="l1">
+   		   <select id="updateteamLead" name="updateteamLead" multiple></select>
+        </div> -->
+   		<br>
+   		
+   		<p>Team Users</p>
+   		
+        <div id="u1">
+   		  <select id="updateteamUser" name="updateteamUser" multiple></select>
+   	    </div>
+    	<div class="button">
+ 		      <div class="updateDatasSave" id="updateDatasSave" onclick="updateDatasSave()">Apply</div>
+	 		  <div class="updatePopUpClose" onclick="updatePopUpClose()">Close</div>
+	    </div>
+    </div>
+    
+    
+    
+     <script type="text/javascript" src = "team.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+     <script type="text/javascript" src="logOut.js"></script>
+   
+    
+    
+</body>
+</html>

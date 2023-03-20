@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product</title>
+<link href="project.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+</head>
+<body onload="viewProjectList()">
+	
+	 <div class="productDetails" id="productDetails">
+	  <div class="productDetailsLeft">
+	   	<div>
+	 		<div class="productLogo">
+	 			<div></div>
+	 			<h1>Projects</h1>
+	 		</div>
+	 		<div class="manuHeads">
+	 			<div class="home"><a href="home.html" onclick="home()">Home</a></div>
+	 			<div class="companyMembers"><a href="members.html"  onclick="Members()">Members</a></div>
+	 			<div class="Team" ><a href="Team.html" onclick="team()">Teams</a></div>
+	 	
+	 			<div class="Project"><a href="project.html" onclick="projects()">Projects</a></div>
+	 			<div class="issues"><a href="issue.html" onclick="issue()">Issues</a></div>
+	 		
+	 			<div class="manuHeadTasks"><a href="taskSummary.html" onclick="tasks()">Tasks</a></div>
+	 			
+	 		</div>
+ 	    </div>
+	  </div>
+	  <div class="producthead">
+ 			<h6>Products</h6>
+ 			<div>
+ 			   <div id="addproductpopup" onclick="addproductPopup()">Add product</div>
+ 			   <div id="logOut" onclick="logOut()">Log out</div>
+ 			</div>
+ 	  </div>
+	  <div class="productDetailsRight">
+	  	<div class="projectHeadings" id="projectHeadings">
+	  		<div class="projectName">PROJECT NAME</div>
+	  		<div class="projectdescription">DESCRIPTION</div>
+	  		<div class="percentage">%</div>
+	  		<div class="teamNameInProject">TEAM</div>
+	  		<div class="projectStatus">STATUS</div>
+	  		<div class="sd">START DATE</div>
+	  		<div class="dd">DUE DATE</div>
+	  		<div class="createdOn">CREATED ON</div>
+	  		<div class="modifiedOn">MODIFIED ON</div>
+	  		<div class="createdBy">CREATED BY</div>
+	  		<div class="modifiedBy">MODIFIED BY</div>
+	  	</div> 
+	  	<div class="viewProjectList" id="viewProjectList"></div>
+	  
+	  </div>
+	</div>
+  
+  
+    <div class="productAddPopUp" id="productAddPopUp">
+    	<h3>Add product</h3>
+    	<div class="addproductInput">
+    	    <p>product Name<span>*</span></p>
+    		<input type="text" id="productName" name="productName">
+    		<p>Team Name</p>
+    		<div>
+    		  <select id="selectTeamName" name="selectTeamName" multiple></select>
+    		</div>
+    		<div class="dates">
+    		   <p>Start Date</p>
+    		   <input type="Date" name="startDate" id="startDate">
+    		   <p>Due Date</p>
+    		   <input type="Date" name="dueDate" id="dueDate">
+    		</div>
+    		<input type="checkbox" id="strict" name="strict">
+    		<label for="strict">Make this a strict project</label>
+    		<p>Description</p>
+    		<textarea rows="5" cols="50" id="description" name="description"></textarea>
+    		<!-- 
+    		<p>Project Access</p>
+    		<input type="radio" id="privateType" name="Type">
+    		<label for="privateType">Private</label>
+    		<h6>Only project users can view and access this project.</h6>
+    		
+    		<input type="radio" id="publicType" name="Type">
+    		<label for="publicType">Public</label>
+    		<h6>Portal users can only view, follow, and comment whereas, project users will have complete access.</h6>
+    		 -->
+    		
+    	</div>
+    	<div class="productButtons">
+    		<div class="productAddButton" onclick="productAddButton()">Add</div>
+    	    <div class="productAddCancelButton" onclick="productAddCancelButton()">Cancel</div>
+    	</div>
+    	
+    	
+    </div>
+    
+    
+    
+    
+    <div class="updateProjectDatas" id="updateProjectDatas">
+       <div class="updateProjectDatasLeft" id="updateProjectDatasLeft">
+       		<span id="smallListHead" class="smallListHead"></span>
+       		<span id="smallListCount"></span>
+       		
+       
+       </div>
+       <div class="updateProjectDatasRight" id="updateProjectDatasRight">
+       		<div class="updateProjectName">
+       		    <div>
+       		    	<p>Project name</p>
+       			    <input type="text" id="updateproductName" name="updateproductName">
+       		    </div>
+       			<div class="updateTeam">
+       				<p>Team Name</p>
+       				<div id="teamNameInProj"></div>
+       			</div>
+       		</div>
+       		<div class="currentStatus">
+       			<p>CURRENT STATUS</p>
+       			<div id="cStatus"></div>
+       		</div>
+       		<div class="updateDes">
+       			<p>Description</p>
+       			<textarea cols="50" rows="5" id="updateDescription" name="updateDescription"></textarea>
+       		</div>
+       		
+       		<div class="ProjectInfromation">
+       			<p>Project Information</p>
+       			<div class="projectInfo">
+	       			<div class="updateStartDate">
+	       				<p>Start date</p>
+	       				<input type="date" id="upStaDate" name="upStaDate">
+	       			</div>
+	       			<div class="updateDueDate">
+	       				<p>Due date</p>
+	       				<input type="date" id="upduDate" name="upduDate">
+	       			</div>
+	       			<div class="upStatus">
+	       				<p>Status</p>
+	       				<select id="updateStatus" name="updateDatas">
+	       					<option value="active">Active</option>
+	       					<option value="inProgress">In Progress</option>
+	       					<option value="delayed">Delayed</option>
+	       					<option value="completed">Completed</option>
+	       					<option value="onHold">On Hold</option>
+	       					<option value="cancelled">Cancelled</option>
+	       					<option value="inTesting">In Testing</option>
+	       					<option value="planning">Planning</option>
+	       					
+	       				</select>
+	       			</div>
+	       	     </div>
+       		</div>
+       		<div class="button">
+ 		      <div class="updateDatasSave" onclick="updateDatasSave()">Apply</div>
+	 		  <div class="updatePopUpClose" onclick="updatePopUpClose()">Close</div>
+	 		</div>
+       </div>
+       
+       
+    
+    </div>
+    
+    <script type="text/javascript" src = "project.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+	<script type="text/javascript" src="logOut.js"></script>
+</body>
+</html>

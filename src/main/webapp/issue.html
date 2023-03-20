@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Issue</title>
+<link href="issue.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="viewIssues()">
+	<div class="issueDetails" id="issueDetails">
+	  <div class="issueDetailsLeft">
+	   	<div>
+	 		<div class="issueLogo">
+	 			<div></div>
+	 			<h1>Projects</h1>
+	 		</div>
+	 		<div class="manuHeads">
+	 		    <div class="home"><a href="home.html" onclick="home()">Home</a></div>
+	 			<div class="companyMembers"><a href="members.html"  onclick="Members()">Members</a></div>
+	 			<div class="Team" ><a href="Team.html" onclick="team()">Teams</a></div>
+	 	
+	 			<div class="Project"><a href="project.html" onclick="projects()">Projects</a></div>
+	 			<div class="issues"><a href="issue.html" onclick="issue()">Issues</a></div>
+	 		
+	 			<div class="manuHeadTasks"><a href="taskSummary.html" onclick="tasks()">Tasks</a></div>
+	 			
+	 		</div>
+ 	    </div>
+	  </div>
+	  <div class="issuehead">
+ 			<h6>Issues</h6>
+ 			<div>
+ 			    <div id="newIssue" class="newIassue" onclick="newIssues()">Add issues</div>
+ 				<div id="logOut" onclick="logOut()">Log out</div>	
+ 			</div>
+ 			
+ 	  </div>
+	  <div class="issueDetailsRight">
+	  	  <div class="addIssueHead" id="addIssueHead">
+	  	  	<p class="issueNameHead">Issue Name</p>
+	  	  	<p class="issueDescript">Description</p>
+	  	  	<p class="issueProjectName">Project Name</p>
+	  	  	
+	  	  	<p class="issueAssignTo">Assign To</p>
+	  	  	<p class="issueStartDate">Start Date</p>
+	  	  	<p class="issueDueDate">Due date</p>
+	  	  	<p class="issueStatus">Status</p>
+	  	  	<p class="issueSeverity">Severity</p>
+	  	  	<p class="issueclassification">classification</p>
+	  	  	<p class="issuereproducible">Reproducible</p>
+	  	  	<p class="issueflag">Flag</p>
+	  	  	
+	  	  </div>
+	      <div class="addissue" id="addissue"></div>
+	  
+	  </div>
+	</div>
+	
+	
+	<div class="addIssuePopUp" id="addIssuePopUp">
+	    <h3>New Issue</h3>
+		<br>
+		
+		<p>Project<span>*</span></p>
+		<select id="projectName" name="projectName" oninput="projectDropDowns()"></select>
+		<br>
+		
+		<p>Issue Title</p>
+		<input name="issueName" id="issueName">
+		<br>
+		
+		<p>Description</p>
+		<textarea cols="50" rows="5" name="description" id="description"></textarea>
+		<br>
+		
+		<p>Assign To</p>
+		<select name="assignTo" id="assignTo"></select>
+		
+		
+		<h3>Issue Information</h3>
+		<br>
+		
+		<p>Due date</p>
+		<input type="date" name="dueDate" id="dueDate">
+		<br>
+		
+		
+		<p>Severity</p>
+		<select name="severity" id="severity">
+			<option value="none">None</option>
+			<option value="critical">Critical</option>
+			<option value="major">Major</option>
+			<option value="minor">Minor</option>
+		</select>
+		<br>
+		
+		<p>Classification</p>
+		<select name="classification" id="classification">
+			<option value="securuty">Security</option>
+			<option value="crash">Crash/Hang</option>
+			<option value="dataLoss">Data loss</option>
+			<option value="performance">Performance</option>
+			<option value="ui">UI/Usability</option>
+			<option value="otherBug">Other bug</option>
+			<option value="feature">Feature (New)</option>
+			<option value="enhancement">Enhancement</option>
+		</select>
+		<br>
+		
+		
+		<p>Reproducible</p>
+		<select name="reproducible" id="reproducible">
+		 	<option value="none">None</option>
+		 	<option value="always">Always</option>
+		 	<option value="someTimes">Sometimes</option>
+		 	<option value="rarely">Rarely</option>
+		 	<option value="unable">Unable</option>
+		 	<option value="neverTried">Never tried</option>
+		 	<option value="notapplicable">Not applicable</option>
+		</select>
+		
+		<br>
+		
+		<p>Flag</p>
+		<select name="flag" id="flag">
+			<option value="internal">Internal</option>
+			<option value="external">External</option>
+		</select>
+	
+	
+		<div class="issueButtons">
+    		<div class="issueAddButton" onclick="issueAddButton()">Add</div>
+    	    <div class="issueAddCancelButton" onclick="issueAddCancelButton()">Cancel</div>
+    	</div>
+	</div>
+	
+	
+	
+	<div class="issueUpdatePopUp" id="issueUpdatePopUp">
+	    <div class="issueUpdatePopUpleft" id="issueUpdatePopUpLeft">
+	    	<span class="classificationHead" id="classificationHead"></span>
+	    	<span class="classificationCount" id="classificationCount"></span>
+	    	<div class="issueSmallList" id="issueSmallList"></div>
+	    </div>
+	    <div class="issueUpdatePopUpRight" id="issueUpdatePopUpRight">
+	    	<div class="issueProject">
+				<div>
+					<p>Issue Name</p>
+					<br>
+				    <input type="text" id="updateIssue" name="updateIssue">
+				</div>
+				<div>
+					<p>Project Name</p>
+					<p id="updateProject"></p>
+				</div>
+			</div>
+			<p>Description</p>
+			<br>
+			<textarea rows="5" cols="50" id="updateDes" name="updateDes"></textarea>
+			<br>
+			
+			<p>Assign To</p>
+			<br>
+			<select id="updateAssignTo" name="updateAssignTo"></select>
+			<br>
+			
+			<p>Due Date</p>
+			<input type="date" id="updateDueDate" name="updateDueDate">
+			<br>
+			
+			
+			<p>Status</p>
+			<br>
+			<select id="status" name="status">
+				<option value="Open">Open</option>
+				<option value="Closed">Closed</option>
+			</select>
+			
+			<p>Severity</p>
+			<br>
+			<select id="updateSeverity" name="updateSeverity">
+				<option value="none">None</option>
+				<option value="critical">Critical</option>
+				<option value="major">Major</option>
+				<option value="minor">Minor</option>
+			</select>
+			<br>
+			
+			
+			<p>Classification</p>
+			<br>
+			<select id="updateClassification" name="updateClassification">
+				<option value="securuty">Security</option>
+				<option value="crash">Crash/Hang</option>
+				<option value="dataLoss">Data loss</option>
+				<option value="performance">Performance</option>
+				<option value="ui">UI/Usability</option>
+				<option value="otherBug">Other bug</option>
+				<option value="feature">Feature (New)</option>
+				<option value="enhancement">Enhancement</option>
+			</select>
+			<br>
+			
+			<p>Reproducible</p>
+			<br>
+			<select id="updateReproducible" name="updateReproducible">
+				<option value="none">None</option>
+			 	<option value="always">Always</option>
+			 	<option value="someTimes">Sometimes</option>
+			 	<option value="rarely">Rarely</option>
+			 	<option value="unable">Unable</option>
+			 	<option value="neverTried">Never tried</option>
+			 	<option value="notapplicable">Not applicable</option>
+			</select>
+			<br>
+			
+			
+			<p>Flag</p>
+			<br>
+			<select id="updateFlag" name="updateFlag">
+				<option value="internal">Internal</option>
+			    <option value="external">External</option>
+			</select>
+			
+			<div class="button">
+	 		  <div class="updateDatasSave" onclick="updateDatasSave()">Apply</div>
+	 		  <div class="updatePopUpClose" onclick="updatePopUpClose()">Close</div>
+	 		</div>
+		    	
+	    </div>
+	    
+	</div>
+	
+	<script type="text/javascript" src="Issue.js"></script>
+	<script type="text/javascript" src="logOut.js"></script>
+</body>
+</html>

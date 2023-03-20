@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>task summary</title>
+<link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="viewTaskList()">
+ <div class="taskSummary" id="taskSummary">
+ 	<div class="taskSummaryLeft">
+ 	  <div>
+ 		<div class="taskSummaryLogo">
+ 			<div></div>
+ 			<h1>Projects</h1>
+ 		</div>
+ 		<div class="manuHeads">
+ 			<div class="home"><a href="home.html" onclick="home()">Home</a></div>
+ 			<div class="companyMembers"><a href="members.html"  onclick="Members()">Members</a></div>
+ 			<div class="Team" ><a href="Team.html" onclick="team()">Teams</a></div>
+ 	
+ 			<div class="Project"><a href="project.html" onclick="projects()">Projects</a></div>
+ 			<div class="issues"><a href="issue.html" onclick="issue()">Issues</a></div>
+ 		
+ 			<div class="manuHeadTasks"><a href="taskSummary.html" onclick="tasks()">Tasks</a></div>
+ 		</div>
+ 	  </div>
+ 	</div>
+ 	<div class="taskSummaryhead">
+ 			<h6>Tasks</h6>
+ 			<div>
+ 			   <div onclick="openPopup()">Add Task</div>
+ 			   <div id="logOut" onclick="logOut()">Log out</div>
+ 			</div>
+ 	</div>
+ 	<div class="taskSummaryRight">
+ 	  <div class="overflow">
+ 		<div class="taskStatusOption">
+ 		<div class="task">
+	 		  <div class="taskClosed">
+	 			<div class="closed">
+	 			  <span>Closed</span>
+	 			  <span class="taskCount" id="closedtaskCount"></span>
+	 			</div>
+	 			 <div class="closedTaskDetails" id="closedTaskDetails">
+	 			 	<div class="closedTaskDetailsImg"></div>
+	 			 	<div class="closedTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="addclosedTask" id="addclosedTask"></div>
+	 		  </div>
+	      </div>
+	      <div class="task">
+	 		  <div class="taskopend">
+	 			<div class="open">
+	 			  <span>Open</span>
+	 			  <span class="taskCount" id="OpentaskCount"></span>
+	 			</div>
+	 			 <div class="OpenTaskDetails" id="OpenTaskDetails">
+	 			 	<div class="openTaskDetailsImg"></div>
+	 			 	<div class="openTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="addOpenTask" id="addOpenTask"></div>
+	 		  </div>
+	 	  </div>
+	 	  <div class="task">
+	 		  <div class="taskInProcess">
+	 			<div class="inProcess">
+	 			  <span>inProgress</span>
+	 			  <span class="taskCount" id="inProcesstaskCount"></span>
+	 			</div>
+	 			 <div class="inProcessTaskDetails" id="inProcessTaskDetails">
+	 			 	<div class="inProcessTaskDetailsImg"></div>
+	 			 	<div class="inProcessTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="addinProcessTask" id="addinProcessTask"></div>
+	 		  </div>
+	 	  </div>
+	 	  <div class="task">
+	 		  <div class="taskCancelled">
+	 			<div class="cancelled">
+	 			  <span>Cancelled</span>
+	 			  <span class="taskCount" id="inCancelledtaskCount"></span>
+	 			</div>
+	 			 <div class="inCancelledTaskDetails" id="inCancelledTaskDetails">
+	 			 	<div class="cancelledTaskDetailsImg"></div>
+	 			 	<div class="cancelledTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="addinCancelledTask" id="addinCancelledTask"></div>
+	 		  </div>
+	 	  </div>
+	 	  <div class="task">
+	 		  <div class="taskInReview">
+	 			<div class="inReview">
+	 			  <span>In Review</span>
+	 			  <span class="taskCount" id="inReviewtaskCount"></span>
+	 			</div>
+	 			 <div class="inReviewTaskDetails" id="inReviewTaskDetails">
+	 			 	<div class="inReviewTaskDetailsImg"></div>
+	 			 	<div class="inReviewTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="addinReviewTask" id="addinReviewTask"></div>
+	 		  </div>
+	 	   </div>
+	 	   <div class="task">
+	 		   <div class="taskToBeTested">
+	 			<div class="toBeTested">
+	 			  <span>To be Tested</span>
+	 			  <span class="taskCount" id="toBeTestedtaskCount"></span>
+	 			</div>
+	 			 <div class="toBeTestedTaskDetails" id="toBeTestedTaskDetails">
+	 			 	<div class="toBeTestedTaskDetailsImg"></div>
+	 			 	<div class="toBeTestedTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="addtoBeTestedTask" id="addtoBeTestedTask"></div>
+	 		  </div>
+	 	  </div>
+	 	  <div class="task">
+	 		  <div class="taskOnHold">
+	 			<div class="onHold">
+	 			  <span>On Hold</span>
+	 			  <span class="taskCount" id="onHoldtaskCount"></span>
+	 			</div>
+	 			 <div class="onHoldTaskDetails" id="onHoldTaskDetails">
+	 			 	<div class="onHoldTaskDetailsImg"></div>
+	 			 	<div class="onHoldTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="addonHoldTask" id="addonHoldTask"></div>
+	 		  </div>
+	 	   </div>
+	 	   <div class="task">
+	 		   <div class="taskdelayed">
+	 			<div class="delayed">
+	 			  <span>delayed</span>
+	 			  <span class="taskCount" id="delayedtaskCount"></span>
+	 			</div>
+	 			 <div class="delayedTaskDetails" id="delayedTaskDetails">
+	 			 	<div class="delayedTaskDetailsImg"></div>
+	 			 	<div class="delayedTaskDetailsHead">Drag an existing Task and drop it under this category.</div>
+	 			 </div>
+	 			 <div class="adddelayedTask" id="adddelayedTask"></div>
+	 		  </div>
+		  </div>
+ 	   </div>
+ 	  </div> 
+    </div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="addTaskPopUp" id="addTaskPopUp">
+ 	<div class="newTaskHead">
+ 		<h3>New Task</h3>
+ 	</div>
+ 	
+ 	<div class="taskInputs">
+ 	
+ 		<p class="NewTaskName">Task Name<span>*</span></p>
+ 		<input type="text" id="newTask" name="taskName">
+ 		<br>
+ 		
+ 		<p class="projectName">Project Name<span>*</span></p>
+ 		
+ 			<!-- <option></option> -->
+ 		<select id="projectDropDown" class="projectDropDown" oninput="projectDropDowns()"></select>
+ 		
+ 		
+ 		<p>Add Description</p>
+ 		<textarea rows="5" cols="50" id="newDesciption" name="newDesciption"></textarea>
+ 		
+ 		
+ 		<p>Assigned to</p>
+ 		<select id="newtaskAssignedTo" name="newtaskAssignedTo" onclick="taskAssign()" ></select>
+ 		
+ 		
+ 		<p>Start Date</p>
+ 		<input type="date" id="newTaskstartDate" name="newTaskstartDate" placeholder="Select Date">
+ 		<p>Due Date</p>
+ 		<input type="date" id="newTaskDueDate" name="newTaskDueDate">
+ 		
+ 		<p>Priority</p>
+ 		<select name="PriorityList" id="PriorityLis">
+ 			<option value="default">None</option>
+ 			<option value="low">low</option>
+ 			<option value="medium">Medium</option>
+ 			<option value="high">High</option>
+ 		</select>
+ 	
+ 	
+ 	</div>
+ 	
+ 	<div class="newTaskFooter">
+ 		<div class="newTaskAdd" onclick="addTaskPopup()">Add</div>
+ 		<div class="newTaskCancel" onclick="cancelTaskPopup()">Cancel</div>
+ 	</div>
+ 
+ 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <div class="newTaskUpdates" id="newTaskUpdates">
+ 	<div class="newTaskUpdatesLeft">
+ 	   <span id="smallListHead" class="smallListHead"></span>
+ 	   <span id="smallListCount"></span>
+ 		<div class="newTaskUpdatesList" id="newTaskUpdatesList"></div>
+ 	</div>
+ 	<div class="newTaskUpdatesRight">
+ 		<div class="newTaskHeads" >
+ 		    <div>
+ 		    	<p>Task name</p>
+ 			    <input type="text" id="newTaskHeads" name="newTaskHeads">
+ 		    </div>
+ 		    <div>
+ 		    	<p>ProjectName</p>
+ 		    	<div id="pn"></div>
+ 		    </div>
+ 		</div>
+ 		<div class="newTaskCurrentStatus">
+ 		   <div id="currentStatus"></div>
+ 		   <p>CURRENT STATUS</p>
+ 		</div>
+ 		
+ 		<div class="des">
+ 			<p>Description</p>
+ 			<textarea rows="5" cols="50" id="updateDescription" name="updateDescription"></textarea>
+ 		</div>
+ 		
+ 		
+ 		<div class="taskInformation">
+ 			<p>Task Information</p>
+ 			<div class="taskInfo">
+	 			<div class="taskInfoLeft">
+		 			<div class="assignedTo">
+		 				<p>Assigned To</p>
+		 				<select id="assignedTodeails" name="assignedTodeails"></select>
+		 				<!-- <input type="text" id="assignedTodeails" name="assignedTodeails"> -->
+		 			</div>
+		 			
+		 			<div class="status">
+		 				<p>Status</p>
+		 				<select id="changeStatus" name="changeStatus">
+			 				<option value="Open">Open</option>
+			 		   		<option value="inProcess">In Progress</option>
+			 		   		<option value="inReview">In Review</option>
+			 		   		<option value="toBeTested">To be Tested</option>
+			 		   		<option value="onHold">On Hold</option>
+			 		   		<option value="delayed">Delayed</option>
+		 					<option value="closed">Closed</option>
+		 					<option value="inCancelled">Cancelled</option>
+		 				</select>
+		 			 </div>
+		 			 <div class="duration" >
+		 				<p>Duration</p>
+		 				<div id="duration"></div>
+		 			</div>
+		 		  </div>
+	 			  <div class="taskInfoRight">
+	 			
+		 			<div class="startDate">
+		 				<p>Start Date</p>
+		 				<input type="date" id="startda" class="startda">
+		 			</div>
+		 			<div class="dueDate">
+		 				<p>Due Date</p>
+		 				<input type="date" id="dueda" class="dueda">
+		 			</div>
+		 			
+		 			
+		 			<div class="priorityList">
+		 				<p>Priority</p>
+		 				<select id="priority" class="priority">
+		 					<option value="default">None</option>
+				 			<option value="low">low</option>
+				 			<option value="medium">Medium</option>
+				 			<option value="high">High</option>
+		 					
+		 				</select>
+		 			</div>
+		 			
+		 			
+		 			<div class="completePercentage">
+		 				<p>Completion Percentage</p>
+		 				<select id="comPer" class="comPer">
+		 					<option value="0">0</option>
+		 					<option value="10">10</option>
+		 					<option value="20">20</option>
+		 					<option value="30">30</option>
+		 					<option value="40">40</option>
+		 					<option value="50">50</option>
+		 					<option value="60">60</option>
+		 					<option value="70">70</option>
+		 					<option value="80">80</option>
+		 					<option value="90">90</option>
+		 					<option value="100">100</option>
+		 				</select>
+		 			</div>
+		 	    </div>
+		 	</div>
+ 			
+ 		</div>
+ 		<div class="button">
+ 		  <div class="updateDatasSave" onclick="updateDatasSave()">Apply</div>
+ 		  <div class="updatePopUpClose" onclick="updatePopUpClose()">Close</div>
+ 		</div>
+ 	</div>
+ </div>
+ <script type="text/javascript" src = "task.js"></script>
+ <script type="text/javascript" src="logOut.js"></script>
+</body>
+</html>
